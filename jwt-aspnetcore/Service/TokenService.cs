@@ -1,11 +1,12 @@
-﻿using JWTASPNetCore.Models;
+﻿using JWTASPNetCore.Interfaces;
+using JWTASPNetCore.Models;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace JWTASPNetCore
+namespace JWTASPNetCore.Service
 {
     public class TokenService : ITokenService
     {
@@ -25,7 +26,7 @@ namespace JWTASPNetCore
                 expires: DateTime.Now.AddMinutes(EXPIRY_DURATION_MINUTES), signingCredentials: credentials);
             return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
         }
-       
+
         public bool IsTokenValid(string key, string issuer, string token)
         {
             var mySecret = Encoding.UTF8.GetBytes(key);

@@ -1,8 +1,9 @@
-﻿using JWTASPNetCore.Models;
+﻿using JWTASPNetCore.Interfaces;
+using JWTASPNetCore.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JWTASPNetCore
+namespace JWTASPNetCore.Repository
 {
     public class UserRepository : IUserRepository
     {

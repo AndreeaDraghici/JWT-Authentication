@@ -1,6 +1,6 @@
 ﻿using JWTASPNetCore.Models;
 
-namespace JWTASPNetCore
+namespace JWTASPNetCore.Interfaces
 {
     public interface ITokenService
     {

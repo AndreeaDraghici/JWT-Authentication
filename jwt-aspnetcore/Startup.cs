@@ -1,3 +1,6 @@
+using JWTASPNetCore.Interfaces;
+using JWTASPNetCore.Repository;
+using JWTASPNetCore.Service;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;

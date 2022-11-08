@@ -1,4 +1,5 @@
-﻿using JWTASPNetCore.Models;
+﻿using JWTASPNetCore.Interfaces;
+using JWTASPNetCore.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
