@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Interfaces"
   ],
   "SelectedNode": "\\jwt-aspnetcore.sln",
   "PreviewInSolutionExplorer": false
