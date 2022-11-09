@@ -11,10 +11,13 @@ namespace JWTASPNetCore.Controllers
 {
     public class HomeController : Controller
     {
+        //read-only instances for each of the three interfaces 
         private readonly IConfiguration _config;
         private readonly IUserRepository _userRepository;
         private readonly ITokenService _tokenService;
         private string generatedToken = null;
+
+        //constructor injection is used in the HomeController class for each of the instances
         public HomeController(IConfiguration config, ITokenService tokenService, IUserRepository userRepository)
         {
             _config = config;
@@ -65,7 +68,6 @@ namespace JWTASPNetCore.Controllers
             //Write your code here to authenticate the user
             return _userRepository.GetUser(userModel);
         }
-
         [Authorize]
         [Route("mainwindow")]
         [HttpGet]
@@ -86,8 +88,9 @@ namespace JWTASPNetCore.Controllers
 
             ViewBag.Message = BuildMessage(token, 50);
             return View();
-        }
 
+   
+        }
         public IActionResult Error()
         {
             ViewBag.Message = "An error occured...";
@@ -104,9 +107,6 @@ namespace JWTASPNetCore.Controllers
             {
                 result += Environment.NewLine + str;
             }
-
-          
-
             return result;
         }
     }
